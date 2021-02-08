@@ -1,3 +1,11 @@
+"""
+Much of this module is taken from the project's example for discovering 
+namespace package plugins:
+
+https://packaging.python.org/guides/creating-and-discovering-plugins/#using-namespace-packages
+"""
+
+
 import importlib
 import pkgutil
 from itertools import chain

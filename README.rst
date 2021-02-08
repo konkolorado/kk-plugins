@@ -226,7 +226,7 @@ When running in a python process, the plugin is available for import:
 
 .. note::
    Again, the ``kk.plugin1`` module in these examples doesn't really provide 
-   any interesting functionality. What is interesting as that in scripts, the 
+   any interesting functionality. What is interesting is that in scripts, the 
    user can access the augmented functionality through the familiar 
    ``from kk import _`` interface.
 
@@ -286,21 +286,21 @@ create one by:
 - Following a project structure that tells Python that this package is a 
   namespace package:
  
-    .. code-block: bash
+.. code-block: bash
 
-        core-module-name/
-            namespace-name/
-                module-name/
-                    __init__.py
-                    main.py
-            pyproject.toml
+    core-module-name/
+        namespace-name/
+            module-name/
+                __init__.py
+                main.py
+        pyproject.toml
 
-        plugin-module-name/
-            namespace-name/
-                module-name/
-                    __init__.py
-                    main.py
-            pyproject.toml
+    plugin-module-name/
+        namespace-name/
+            module-name/
+                __init__.py
+                main.py
+        pyproject.toml
 
 .. note::
 
@@ -320,13 +320,13 @@ plugin's Typer app, effectively becoming the subcommand name). The plugin
 exposes this in its `__init__.py` file.
 
 The core module implements a plugin loading helper module, aptly named 
-`plugin_utils.py`. It provides a series of functions that can find modules in 
-a given namespace (in our example, the namespace is ``kk``) and import them. 
-`main.py` uses these functions to identify plugins and pull the required 
-Typer attributes (an ``app`` instance and its ``name``) to load the plugin 
-into the main CLI application. Finally, the core project defines a CLI script 
-(via `poetry`_) that runs `main.py` to create the CLI with all available 
-plugins loaded. 
+``plugin_utils.py``. It provides a series of functions that can find modules 
+in a given namespace (in our example, the namespace is ``kk``) and import 
+them. ``main.py`` uses these functions to identify plugins and pull the 
+required Typer attributes (an ``app`` instance and its ``name``) to load the 
+plugin into the main CLI application. Finally, the core project defines a CLI 
+script (via `poetry`_) that runs ``main.py`` to create the CLI with all 
+available plugins loaded. 
 
 .. _Typer: https://typer.tiangolo.com/
 .. _poetry: https://python-poetry.org/
