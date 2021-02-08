@@ -14,7 +14,7 @@ this example and the code for the example plugin is in ``kk-plugin1``). The
 core CLI program will dynamically find ``plugins`` in the ``kk`` namespace and 
 load them onto itself.
 
-Why is this cool? This let's you, a project, or a company split its CLI tools 
+Why is this cool? This lets you, a project, or a company split its CLI tools 
 and/or libraries amongst different code repositories, allowing for different 
 release cadences. It is also a form of bloat control; clients who require 
 functionality beyond the base CLI or library can simply install the additional 
