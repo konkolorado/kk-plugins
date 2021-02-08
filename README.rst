@@ -31,8 +31,9 @@ installed to interactively follow along with the examples.
    In the code snippets below, lines that begin with ``>>`` indicate an 
    operation's output. 
 
-.. toctree::
- :maxdepth: 2
+.. contents:: Table of Contents
+   :depth: 2
+
 
 Example
 -------
@@ -286,21 +287,19 @@ create one by:
 - Following a project structure that tells Python that this package is a 
   namespace package:
  
-.. code-block: bash
-
-    core-module-name/
-        namespace-name/
-            module-name/
-                __init__.py
-                main.py
-        pyproject.toml
-
-    plugin-module-name/
-        namespace-name/
-            module-name/
-                __init__.py
-                main.py
-        pyproject.toml
+  core-module-name/
+      namespace-name/
+          module-name/
+              __init__.py
+              main.py
+      pyproject.toml
+  
+  plugin-module-name/
+      namespace-name/
+          module-name/
+              __init__.py
+              main.py
+      pyproject.toml
 
 .. note::
 
